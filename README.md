@@ -5,6 +5,8 @@ This app simulates two steps in the checkout process of a retail system:
  1. Calculate the total price after applying promo discounts 
  2. Update the inventory counts after a succesful transaction
 
+ The tests of biggest significance are in [checkout_system.test.ts](/src/checkout/checkout_system.test.ts).
+
  ### Approach to Calculate Discounts ###
  To calculate discounts, these concepts are used:
  - **Discount:** An object that describes savings based on some promotion. Discounts can be placed in a "discounts" section of an invoice.
