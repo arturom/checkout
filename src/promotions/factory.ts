@@ -14,5 +14,5 @@ export function instantiateProcessor(rule: SupportedRules): PromoProcessor {
         case "BuyXQuantityGetYPercentOff":
             return new BuyXQuantityGetYPercentOffProcessor(rule);
     }
-    throw new Error("Unknown rule")
+    throw new Error("Unknown rule");
 }
