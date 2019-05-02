@@ -51,7 +51,7 @@ This app simulates two steps in the checkout process of a retail system:
 npm i
 
 # Run unit tests
-npm run tests
+npm run test
 
 # Transpile Typescript to Javascript
 npm run compile
