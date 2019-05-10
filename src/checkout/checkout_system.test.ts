@@ -46,7 +46,7 @@ test('Scanned Items: Google Home, Google Home, Google Home', () => {
     expect(invoiceItems.discounts.length).toBe(1);
     expect(invoiceItems.discounts[0].description).toBe(googleHomeBuy3GetOneFree.description);
     expect(invoiceItems.subTotal).toBe(149.97);
-    expect(invoiceItems.total).toBeCloseTo(99.98, 2);
+    expect(invoiceItems.total).toBe(99.98);
 });
 
 test('Scanned Items: Alexa Speaker, Alexa Speaker, Alexa Speaker', () => {

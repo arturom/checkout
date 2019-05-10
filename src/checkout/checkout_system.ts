@@ -35,7 +35,7 @@ export function calculateInvoiceItems(processors: PromoProcessor[], itemsInCart:
     const discounts = calculatePromoDiscounts(processors, itemsBySku);
     const totalDiscount = calculateTotalDiscount(discounts);
     const subTotal = calculateSubTotal(itemsInCart);
-    const total = subTotal - totalDiscount;
+    const total = roundMoneyValue(subTotal - totalDiscount);
     return {
         itemsInCart,
         discounts,
@@ -49,4 +49,8 @@ export function calculateSubTotal(itemsInCart: ItemInCart[]): number {
     return itemsInCart
         .map(item => item.item.price * item.quantity)
         .reduce((prev, curr) => prev + curr, 0);
+}
+
+function roundMoneyValue(amount: number) {
+    return Math.round(amount * 100) / 100;
 }
