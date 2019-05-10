@@ -29,9 +29,9 @@ This app simulates two steps in the checkout process of a retail system:
 	"234234": 2,
 	"A304SD": 1 
 }
-
- The [sample_data.sh file`](/sample_data.sh) has examples using cURL of how to use this API.
  ```
+
+ The [sample_data.sh file](/sample_data.sh) has examples using cURL of how to use this API.
 
 
 ### Possible Improvements ###
