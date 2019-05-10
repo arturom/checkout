@@ -29,6 +29,8 @@ This app simulates two steps in the checkout process of a retail system:
 	"234234": 2,
 	"A304SD": 1 
 }
+
+ The [sample_data.sh file`](/sample_data.sh) has examples using cURL of how to use this API.
  ```
 
 
@@ -58,4 +60,7 @@ npm run compile
 
 # Run server after transpiling
 node buld/server/server.js
+
+# Add the sample data and "checkout" items to get their total (This output can be piped to JQ if installed)
+sh sample_data.sh
 ```

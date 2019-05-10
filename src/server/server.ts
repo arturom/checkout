@@ -5,24 +5,12 @@ import { InMemoryInventory } from '../inventory/in_memory_inventory';
 import { chain } from 'lodash';
 import { ItemInCart } from '../models';
 import { instantiateProcessor } from '../promotions/factory';
-import { alexaSpeaker, googleHome, macbookPro, raspberryPiB  } from '../fixtures/inventory_items';
-import { alexaBuyMoreThan3ForTenPercentOff, googleHomeBuy3GetOneFree, macbookProBuyOneGetRaspberryPiFree } from '../fixtures/promo_rules';
 
 const app = express();
 
 const inventory = new InMemoryInventory();
 const processors = [];
 const checkoutSystem = new Checkout(inventory, processors);
-
-
-inventory.introduceItem(alexaSpeaker);
-inventory.introduceItem(googleHome);
-inventory.introduceItem(macbookPro);
-inventory.introduceItem(raspberryPiB);
-
-processors.push(instantiateProcessor(alexaBuyMoreThan3ForTenPercentOff));
-processors.push(instantiateProcessor(macbookProBuyOneGetRaspberryPiFree));
-processors.push(instantiateProcessor(googleHomeBuy3GetOneFree));
 
 app.use(bodyParser.json());
 
